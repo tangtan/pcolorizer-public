@@ -1,0 +1,199 @@
+.ReferenceView-container {
+    width: 100%;
+    height: 100%;
+    background-color: #b09872;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ReferenceView-content {
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+}
+
+.Reference-canvas{
+    width: 100%;
+    height: 50%;
+}
+
+.Reference-title{
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5a4e3b;
+    border-radius: 4px 4px 0px 0px;
+    color: #fff6dc;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Reference-canvas-container {
+    width: 100%;
+    height: calc(100% - 28px);
+    border: 3px solid #5a4e3b;
+    border-radius: 0px 0px 4px 4px;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    background-color: #fff6dc;
+    overflow: hidden;
+}
+
+.Reference-list {
+    margin-top: 8px;
+    width: 100%;
+    height: calc(50% - 8px);
+}
+
+.Reference-list-container {
+    width: 100%;
+    height: calc(100% - 28px);
+}
+
+.Reference-list-title {
+    margin-top: 8px;
+    width: 100%;
+    height: 28px;
+    display: flex;
+}
+
+.Reference-list-content {
+    margin-top: 4px;
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow-y: scroll;
+}
+
+.Reference-list-index-title {
+    width: 10%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: #fff6dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #594d3a;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Reference-list-score-title {
+    margin-left: 4px;
+    width: calc(10% - 4px);
+    height: 100%;
+    border-radius: 4px;
+    background-color: #fff6dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #594d3a;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Reference-list-origin-title {
+    margin-left: 4px;
+    width: calc(40% - 4px);
+    height: 100%;
+    border-radius: 4px;
+    background-color: #fff6dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #594d3a;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Reference-list-heatmap-title {
+    margin-left: 4px;
+    width: calc(40% - 4px);
+    height: 100%;
+    border-radius: 4px;
+    background-color: #fff6dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #594d3a;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Reference-image-item {
+    margin-bottom: 4px;
+    width: 100%;
+    height: 136.5px;
+    display: flex;
+}
+
+.Reference-list-index-content {
+    width: 10%;
+    height: 100%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Reference-list-score-content {
+    margin-left: 4px;
+    width: calc(10% - 4px);
+    height: 100%;
+    border-radius: 4px;
+    background-color: #fff6dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #594d3a;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Reference-list-origin-content {
+    margin-left: 4px;
+    width: calc(40% - 4px);
+    height: 100%;
+    border-radius: 4px;
+    background-color: #fff6dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #594d3a;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Reference-list-heatmap-content {
+    margin-left: 4px;
+    width: calc(40% - 4px);
+    height: 100%;
+    border-radius: 4px;
+    background-color: #fff6dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #594d3a;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Reference-index-div {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Reference-image {
+    width: 90%;
+    height: 90%;
+    border-radius: 4px;
+    object-fit: cover;
+}
