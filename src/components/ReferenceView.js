@@ -58,7 +58,7 @@ export const ReferenceView = ({
 
     // console.log("test-print-clipScoreOverview", clipScoreOverview)
 
-    const [currentDetail, setCurrentDetial] = useState(-1);
+    const [currentDetail, setCurrentDetial] = useState(0);
 
     const referenceItems = useMemo(() => {
         return referenceImages.map((images, idx) => {
@@ -112,6 +112,8 @@ export const ReferenceView = ({
             </div>
         })
     }, [clipScoreOverview, currentDetail])
+
+    console.log("test-print", referenceImages[currentDetail])
 
     return <div className="ReferenceView-container">
         <div className="ReferenceView-content">
