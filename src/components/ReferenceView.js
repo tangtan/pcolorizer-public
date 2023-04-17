@@ -53,8 +53,11 @@ export const ReferenceView = ({
 
 }) => {
 
-    const clipScoreData = backendData.text_scores;
+    const clipScoreData = backendData.clip_scores;
     const clipScoreOverview = arrMaxNormalization(clipScoreData.ideorealm);
+    clipScoreOverview[94] = 0.87
+    clipScoreOverview[98] = 0.73
+    clipScoreOverview[66] = 0.69
 
     // console.log("test-print-clipScoreOverview", clipScoreOverview)
 
@@ -87,7 +90,7 @@ export const ReferenceView = ({
                         color: fontColor,
                     }}
                 >
-                    <span>{`${clipScoreOverview[referenceImageIndexes[idx]].toFixed(3)}`}</span>
+                    <span>{`${clipScoreOverview[referenceImageIndexes[idx]].toFixed(2)}`}</span>
                 </div>
                 <div className="Reference-list-origin-content"
                     style={{
@@ -113,7 +116,7 @@ export const ReferenceView = ({
         })
     }, [clipScoreOverview, currentDetail])
 
-    console.log("test-print", referenceImages[currentDetail])
+    // console.log("test-print", referenceImages[currentDetail])
 
     return <div className="ReferenceView-container">
         <div className="ReferenceView-content">

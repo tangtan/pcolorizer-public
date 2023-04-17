@@ -1,7 +1,8 @@
 export function arrNormalization(arr) {
     let total = 0;
     arr.forEach((v) => total += v);
-    return arr.map((v) => v / total);
+    if(total === 0) return arr.map(_ => 0)
+    else return arr.map((v) => v / total);
 }
 
 export function arrMaxNormalization(arr) {
@@ -15,12 +16,20 @@ export function listNormalization(list) {
     return list.map((v) => [v[0], v[1] / total]);
 }
 
+// hard code
+export function listNormalizationV3(list) {
+    let total = 0;
+    list.forEach((v) => total += v[2]);
+    return list.map((v) => [v[0], v[1], v[2] / total]);
+}
+
+// hard code
 export function listMaxNormalization(list) {
     let maxValue = 0;
     list.forEach((v) => {
         if(v[1] > maxValue) maxValue = v[1];
     })
-    return list.map((v) => [v[0], v[1] / maxValue]);
+    return list.map((v) => [v[0], v[1] / maxValue, v[2], v[3]]);
 }
 
 export function RGB216(colorRGB) {

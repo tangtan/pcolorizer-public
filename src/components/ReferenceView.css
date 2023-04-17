@@ -197,3 +197,7 @@
     border-radius: 4px;
     object-fit: cover;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
