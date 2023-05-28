@@ -1,5 +1,6 @@
 import './App.css';
-import { PaintBoard } from './components/PaintBoard';
+import { PaintingBoard } from './art-toolkits/PaintingBoard';
+// import { PaintBoard } from './components/PaintBoard';
 import { ReferenceView } from './components/ReferenceView';
 import { TimelineView } from './components/TimelineView';
 
@@ -13,7 +14,8 @@ function App() {
             <div className='App-content'>
                 <div className='App-part1'>
                     <div className='App-board'>
-                        <PaintBoard />
+                        {/* <PaintBoard /> */}
+                        <PaintingBoard toolNavigatorWidth={80} paintingNavigatorHeight={28} hasBottomPanel={true} />
                     </div>
                     <div className='App-timeline'>
                         <TimelineView />
@@ -27,6 +29,10 @@ function App() {
             </div>
         </div>
     );
+
+//    return (
+//         <h1 className="text-3xl font-bold">Hello word</h1>
+//    )
 }
 
 export default App;
