@@ -4,28 +4,20 @@ import { adaptWH } from "./utils";
 
 export const CanvasPainter = ({
     imgSrc,
-    state,
+    state = 0,
     index,
     sharedMove,
     changeSharedMove,
     sharedScale,
     changeSharedScale,
 }) => {
-    // canvas 不显示image，只用于记录画笔?
-    // console.log("test-print-imgSrc", imgSrc, state, index);
-   // console.log("test-print-sharedMove", sharedScale);
 
     const canvasRef = useRef(null);
     const [canvasSize, setCanvasSize] = useState([0, 0]);
-    const [canvasOffset, setCanvasOffset] = useState([0, 0]);
     useEffect(() => {
         setCanvasSize([
             canvasRef.current?.clientWidth || 0,
             canvasRef.current?.clientHeight || 0
-        ]);
-        setCanvasOffset([
-            canvasRef.current?.offsetLeft || 0,
-            canvasRef.current?.offsetTop || 0
         ]);
     }, [canvasRef, state])
 
@@ -101,7 +93,7 @@ export const CanvasPainter = ({
                 zIndex: "100",
                 left: `${sharedMove[0]}px`,
                 top: `${sharedMove[1]}px`,
-                background: `url(${imgSrc}) no-repeat`,
+                backgroundImage: `url(${imgSrc})`,
                 backgroundSize: '100% 100%',
             }}
             onWheel={(e) => changeSharedScale(e.deltaY)}

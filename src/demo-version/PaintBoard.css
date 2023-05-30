@@ -4,62 +4,20 @@
     display: flex;
 }
 
-.Board-navigator {
-    width: 80px;
-    height: 100%;
-    background-color: #b09872;
-    border-radius: 8px 0px 0px 8px;
-    border: 3px solid #5a4e3b;
-    box-sizing: border-box;
-}
-
 .Board-content{
-    width: calc(100% - 80px);
+    width: 100%;
     height: 100%;
     border: 3px solid #5a4e3b;
     box-sizing: border-box;
-    border-radius: 0px 8px 8px 0px;
-    border-left-width: 0px;
-}
-
-.Board-tool-icon {
-    border: 2px solid #594d3a;
     border-radius: 8px;
-}
-
-.Board-tool-recall {
-    margin-top: 6px;
-    margin-left: 6px;
-    width: calc(100% - 6px);
-    height: 30px - 4px;
-    display: flex;
-    align-items: center;
-}
-
-.Board-tool-painting {
-    margin-top: -15px;
-    width: 100%;
-    height: calc(100% - 30px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Board-tool-container {
-    margin-left: 2px;
-    width: calc(100% - 2px);
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .Painting-navigator{
     width: 100%;
-    height: 24px;
+    height: 28px;
     background-color: #b09872;
     border: 3px solid #5a4e3b;
-    border-radius: 0px 4px 0px 0px;
+    border-radius: 4px 4px 0px 0px;
     border-width: 0px 0px 3px 0px;
     display: flex;
 }
@@ -72,7 +30,7 @@
 }
 
 .Image-title {
-    width: 100px;
+    width: 150px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -81,7 +39,7 @@
 }
 
 .Tixing-div {
-    width: 120px;
+    width: 150px;
     height: 0;
     border-left: 28px solid transparent;
     border-right: 28px solid transparent;
@@ -105,9 +63,8 @@
 
 .Painting-canvas-container{
     width: 100%;
-    height: calc(100% - 30px);
+    height: calc(100% - 28px);
     display: flex;
-    /* position: relative; */
 }
 
 .Painting-canvas {
@@ -199,3 +156,4 @@
     width: 100%;
     height: 24px;
 }
+

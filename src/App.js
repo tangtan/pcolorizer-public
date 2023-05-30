@@ -1,10 +1,17 @@
+import { useState } from 'react';
 import './App.css';
-import { PaintingBoard } from './art-toolkits/PaintingBoard';
-// import { PaintBoard } from './components/PaintBoard';
-import { ReferenceView } from './components/ReferenceView';
-import { TimelineView } from './components/TimelineView';
+import { DemoPaintBoard } from './demo-version/PaintBoard';
+import { DemoReferenceView } from './demo-version/ReferenceView';
+import { DemoTimelineView } from './demo-version/TimelineView';
+import case2Query from "./images/case2/query.jpg";
+// import case2Restored1 from "../images/case2/restored1.jpg";
 
 function App() {
+
+    const [referenceImages, setReferenceImages] = useState([]);
+    const [colorizedVersions, setColorizedVersions] = useState([case2Query]);
+
+    // console.log("test-print-colorizedVersions", colorizedVersions)
 
     return (
         <div className="App">
@@ -14,25 +21,31 @@ function App() {
             <div className='App-content'>
                 <div className='App-part1'>
                     <div className='App-board'>
-                        {/* <PaintBoard /> */}
-                        <PaintingBoard toolNavigatorWidth={80} paintingNavigatorHeight={28} hasBottomPanel={true} />
+                        <DemoPaintBoard restoredImages={colorizedVersions} />
                     </div>
                     <div className='App-timeline'>
-                        <TimelineView />
+                        <DemoTimelineView 
+                            currentImages={referenceImages} 
+                            changeReferenceImages={(newImages) => setReferenceImages(newImages)}
+                        />
                     </div>
                 </div>
                 <div className='App-part2'>
                     <div className='App-reference'>
-                        <ReferenceView />
+                        <DemoReferenceView 
+                            referenceImages={referenceImages} 
+                            changeColorizedVersions={(newVersion) => {
+                                const imageUrl = URL.createObjectURL(newVersion);
+                                console.log("test-print", newVersion, imageUrl);
+
+                                colorizedVersions.push(imageUrl);
+                                setColorizedVersions(JSON.parse(JSON.stringify(colorizedVersions)));
+                            }}/>
                     </div>
                 </div>
             </div>
         </div>
     );
-
-//    return (
-//         <h1 className="text-3xl font-bold">Hello word</h1>
-//    )
 }
 
 export default App;

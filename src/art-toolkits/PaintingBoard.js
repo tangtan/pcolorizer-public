@@ -1,8 +1,5 @@
 import { defaultHasBottomPannel, defaultPBPaintingNavigatorHeight, defaultPBToolNavigatorWidth, defaultPBToolTypes, PaintingBoardToolTypeEnum } from "./PaintingBoardConfig.js"
 
-// import BrushSVG from "../icons/brush.svg";
-// import { IconButton } from "./IconButton";
-
 /**
  * 
  * @param {Array<string>} toolkitList 

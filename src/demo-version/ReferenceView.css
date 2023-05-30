@@ -40,6 +40,7 @@
     box-sizing: border-box;
     background-color: #fff6dc;
     overflow: hidden;
+    position: relative;
 }
 
 .Reference-list {
@@ -68,7 +69,7 @@
 }
 
 .Reference-list-index-title {
-    width: 10%;
+    width: 12%;
     height: 100%;
     border-radius: 4px;
     background-color: #fff6dc;
@@ -80,9 +81,9 @@
     font-weight: 600;
 }
 
-.Reference-list-score-title {
+.Reference-list-meta-title {
     margin-left: 4px;
-    width: calc(10% - 4px);
+    width: calc(28% - 4px);
     height: 100%;
     border-radius: 4px;
     background-color: #fff6dc;
@@ -96,21 +97,7 @@
 
 .Reference-list-origin-title {
     margin-left: 4px;
-    width: calc(40% - 4px);
-    height: 100%;
-    border-radius: 4px;
-    background-color: #fff6dc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #594d3a;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.Reference-list-heatmap-title {
-    margin-left: 4px;
-    width: calc(40% - 4px);
+    width: calc(60% - 4px);
     height: 100%;
     border-radius: 4px;
     background-color: #fff6dc;
@@ -130,7 +117,7 @@
 }
 
 .Reference-list-index-content {
-    width: 10%;
+    width: 12%;
     height: 100%;
     border-radius: 4px;
     display: flex;
@@ -140,9 +127,9 @@
     font-weight: 600;
 }
 
-.Reference-list-score-content {
+.Reference-list-meta-content {
     margin-left: 4px;
-    width: calc(10% - 4px);
+    width: calc(28% - 4px);
     height: 100%;
     border-radius: 4px;
     background-color: #fff6dc;
@@ -156,21 +143,7 @@
 
 .Reference-list-origin-content {
     margin-left: 4px;
-    width: calc(40% - 4px);
-    height: 100%;
-    border-radius: 4px;
-    background-color: #fff6dc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #594d3a;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.Reference-list-heatmap-content {
-    margin-left: 4px;
-    width: calc(40% - 4px);
+    width: calc(60% - 4px);
     height: 100%;
     border-radius: 4px;
     background-color: #fff6dc;

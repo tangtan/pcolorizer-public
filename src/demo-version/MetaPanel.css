@@ -259,3 +259,7 @@
     width: calc(100% - 16px);
     height: calc(50% - 40px);
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
