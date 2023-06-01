@@ -1,6 +1,6 @@
 # Use node alpine image as the base image.
 # See why use alpine images: https://yeasy.gitbooks.io/docker_practice/cases/os/alpine.html
-FROM node:9-alpine
+FROM node:18-alpine
 MAINTAINER ZJUIDG
 
 # WORKDIR is similar to "cd". The directory will be created if not exists.
