@@ -35,7 +35,8 @@ function App() {
                         <DemoReferenceView 
                             referenceImages={referenceImages} 
                             changeColorizedVersions={(newVersion) => {
-                                const imageUrl = URL.createObjectURL(newVersion);
+                                // const imageUrl = URL.createObjectURL(newVersion);
+                                const imageUrl = newVersion;
                                 console.log("test-print", newVersion, imageUrl);
 
                                 colorizedVersions.push(imageUrl);

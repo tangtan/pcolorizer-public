@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/public/database
+# /public/database
 /.pnp
 .pnp.js
 

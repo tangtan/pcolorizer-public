@@ -317,14 +317,17 @@ export const DemoReferenceView = ({
                             cursor: "pointer",
                         }}
                         onClick={() => 
-                            ExemplarBasedColorization({
-                                exampleIndex: referenceImages[currentDetail] + 1
-                            })
-                            .then(res => {
-                                // console.log("test-print-res", res)
-                                changeColorizedVersions(res)
-                            }
-                        )}
+                            // ExemplarBasedColorization({
+                            //     exampleIndex: referenceImages[currentDetail] + 1
+                            // })
+                            // .then(res => {
+                            //     // console.log("test-print-res", res)
+                            //     // changeColorizedVersions(res)
+                            //     changeColorizedVersions(`database/colorized/${referenceImages[currentDetail] + 1}.jpg`)
+                            // })
+
+                            setTimeout(() => changeColorizedVersions(`database/colorized/${referenceImages[currentDetail] + 1}.jpg`), 2000)
+                        }
                     >
                         <div style={{fontSize: "24px", fontWeight: "600", color: "#5a4e3b"}}>C</div>   
                     </div>
