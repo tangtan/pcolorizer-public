@@ -1,0 +1,33 @@
+variables:
+  CI_DEPLOY_NAME: "$CI_PROJECT_NAME"
+  CI_IMAGE_URL: "harbor.zjuidg.org/library/$CI_PROJECT_PATH_SLUG/$CI_COMMIT_REF_SLUG"
+  CI_IMAGE_CURRENT: "${CI_IMAGE_URL}:${CI_COMMIT_SHA}"
+  CI_IMAGE_LATEST: "${CI_IMAGE_URL}:latest"
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: docker:20.10.6
+  script:
+    - docker pull ${CI_IMAGE_LATEST} || true
+    - docker build $(docker inspect --type=image ${CI_IMAGE_LATEST} >/dev/null 2>&1 && echo "--cache-from ${CI_IMAGE_LATEST}") -t ${CI_IMAGE_LATEST} -t ${CI_IMAGE_CURRENT} .
+    - docker build -t ${CI_IMAGE_LATEST} -t ${CI_IMAGE_CURRENT} .
+    - docker push ${CI_IMAGE_LATEST}
+    - docker push ${CI_IMAGE_CURRENT}
+
+deploy:
+  stage: deploy
+  image: harbor.zjuidg.org/library/kubectl
+  environment:
+    name: production
+    url: $CI_DEPLOY_NAME.projects.zjuidg.org
+  script:
+    # use kn to create the service
+    - kn service apply $CI_DEPLOY_NAME --image ${CI_IMAGE_CURRENT} -a app.gitlab.com/app=$CI_PROJECT_PATH_SLUG -a app.gitlab.com/env=$CI_ENVIRONMENT_SLUG
+    # clean the previous crashed revisions
+    - kn revision delete --prune $CI_DEPLOY_NAME
+    # logs for ensuring it works
+    - echo -e "To see logs and access to the terminal, please visit \e[31m\"$CI_PROJECT_URL/-/environments\"\e[0m"
