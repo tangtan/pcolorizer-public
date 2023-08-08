@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/[http://](http://)tangtan.github.io/pcolorizer-public/static/css/main.cbd002cc.css",
+    "main.js": "/[http://](http://)tangtan.github.io/pcolorizer-public/static/js/main.0ae03504.js",
+    "static/js/787.0ac5a10b.chunk.js": "/[http://](http://)tangtan.github.io/pcolorizer-public/static/js/787.0ac5a10b.chunk.js",
+    "static/media/query.jpg": "/[http://](http://)tangtan.github.io/pcolorizer-public/static/media/query.e7c2047b19be3a1a8682.jpg",
+    "static/media/imagery2.jpg": "/[http://](http://)tangtan.github.io/pcolorizer-public/static/media/imagery2.0eb8ea98513355f59255.jpg",
+    "static/media/imagery1.jpg": "/[http://](http://)tangtan.github.io/pcolorizer-public/static/media/imagery1.215735c72b3bffddcbac.jpg",
+    "static/media/add.svg": "/[http://](http://)tangtan.github.io/pcolorizer-public/static/media/add.5d2a571ad3750ca3250f197524ac5aa3.svg",
+    "static/media/search.svg": "/[http://](http://)tangtan.github.io/pcolorizer-public/static/media/search.0d20a55b97ba7776a0063159660c7eb3.svg",
+    "index.html": "/[http://](http://)tangtan.github.io/pcolorizer-public/index.html",
+    "static/media/open_close.svg": "/[http://](http://)tangtan.github.io/pcolorizer-public/static/media/open_close.0fe0e08e4b0bd8aaf19499c3005dc480.svg",
+    "static/media/text.svg": "/[http://](http://)tangtan.github.io/pcolorizer-public/static/media/text.3fbba4a673154f8c53f02b08c3d3d8d9.svg",
+    "main.cbd002cc.css.map": "/[http://](http://)tangtan.github.io/pcolorizer-public/static/css/main.cbd002cc.css.map",
+    "main.0ae03504.js.map": "/[http://](http://)tangtan.github.io/pcolorizer-public/static/js/main.0ae03504.js.map",
+    "787.0ac5a10b.chunk.js.map": "/[http://](http://)tangtan.github.io/pcolorizer-public/static/js/787.0ac5a10b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cbd002cc.css",
+    "static/js/main.0ae03504.js"
+  ]
+}
